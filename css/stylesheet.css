@@ -12,7 +12,40 @@ html{
 }
 
 .tile{
-border: 10px solid black;
-width: auto;
-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    width: auto;
+    height: auto;
+    cursor: grab;
+
+
+}
+
+.tile:hover{
+    background-image: url(../pictures/jump.gif);
+    background-size: contain;
+    
+}
+
+
+#1 ,#2 ,#3{
+    border-top: none;
+}
+
+#1, #4, #7{
+    border-left: none;
+}
+
+#7, #8, #9{
+    border-bottom: none;
+}
+
+#3, #6, #9{
+    border-right: none;
+}
+
+img{
+    object-fit: contain;
 }
