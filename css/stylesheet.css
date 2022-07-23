@@ -1,4 +1,17 @@
 html{
+    background: url(../pictures/background.gif) no-repeat;
+    background-size: 100%;
+    
+}
+
+@font-face {
+    font-family: lobster;
+    src: url(../fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+    font-family: edu;
+    src: url(../fonts/EduVICWANTBeginner-VariableFont_wght.ttf);
 }
 
 .game{
@@ -7,45 +20,122 @@ html{
     padding: 10px;
     width: 450px;
     height: 450px;
+    margin: 0 auto;
+    
+  
     
 
 }
 
+h1{
+    position:inherit;
+    left: 100px;
+    top: 20px;
+    font-size: 60px;
+    color: gray;
+    background: bisque;
+    max-width: fit-content;
+    box-shadow: 5px 5px 5px gray;
+    font-family: lobster;
+    letter-spacing:  5px;
+
+}
+
 .tile{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border: 2px solid black;
-    width: auto;
-    height: auto;
     cursor: grab;
+  
 
 
 }
 
 .tile:hover{
-    background-image: url(../pictures/jump.gif);
-    background-size: contain;
+    background-image: url(../pictures/jump.gif)  ;
+    background-size: cover;
+    z-index: 0;
+    
     
 }
 
 
-#1 ,#2 ,#3{
+#one ,#two ,#three{
     border-top: none;
 }
 
-#1, #4, #7{
+#one, #four, #seven{
     border-left: none;
 }
 
-#7, #8, #9{
+#seven, #eight, #nine{
     border-bottom: none;
 }
 
-#3, #6, #9{
+#three, #six, #nine{
     border-right: none;
 }
 
-img{
-    object-fit: contain;
+.victory{
+    position: absolute;
+    top: 150px;
+    right: 175px;
+    font-size: 50px;
+    visibility: hidden;
+    width: 200px;
+    font-family: edu;
+    
+
+}
+
+#scoreTitle{
+    font-size: 30px;
+    
+}
+
+.scores{
+    position: absolute;
+    left: 40px;
+    font-size: 30px;
+    display: flex;
+    align-content: flex-start;
+    gap: 10px;
+    align-items: baseline;
+    color:gray;
+    background: bisque;
+    box-shadow: 5px 5px 5px gray;
+    font-family: edu;
+
+}
+
+.play-again{
+    padding: 20px 30px;
+    position:absolute;
+    top: 400px;
+    right: 250px;
+    background-color: bisque;
+    color: gray;
+    font-size: 20px;
+    box-shadow: 5px 5px 5px gray;
+    font-family: edu;
+    visibility: hidden;
+
+
+}
+
+
+.show{
+    display:block;
+}
+
+.player1 {
+    background: url(../pictures/gray\ cat.png) ;
+    background-size: cover;
+}
+
+.player2 {
+    background: url(../pictures/orange\ cat.png);
+    background-size: cover;
+}
+
+body.finished .play-again, .victory{
+    visibility: visible;
 }
